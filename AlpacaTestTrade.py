@@ -30,9 +30,9 @@ api.submit_order(symbol='SPCE',
     qty=1, 
     side='buy', 
     time_in_force='gtc', 
-    type='market', 
+    type='market')
     #limit_price=400.00, 
-    #client_order_id='001')
+    #client_order_id='001'
 
 
 # In[ ]:
