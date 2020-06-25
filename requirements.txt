@@ -6,7 +6,6 @@ asyncio-nats-client==0.10.0
 attrs==19.3.0
 backcall==0.2.0
 certifi==2020.6.20
-chardet==3.0.4
 jedi @ file:///C:/ci/jedi_1592833825077/work
 jupyter-client==6.1.3
 jupyter-core==4.6.3
