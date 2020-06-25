@@ -9,7 +9,6 @@ certifi==2020.6.20
 chardet==3.0.4
 colorama==0.4.3
 decorator==4.4.2
-Deprecated==1.2.10
 ipykernel @ file:///C:/ci/ipykernel_1592405451716/work/dist/ipykernel-5.3.0-py3-none-any.whl
 ipython @ file:///C:/ci/ipython_1592348478909/work
 ipython-genutils==0.2.0
