@@ -30,7 +30,6 @@ certifi==2019.11.28
 cffi==1.14.0
 chardet==3.0.4
 Click==7.0
-clyent==1.2.2
 colorama==0.4.3
 comtypes==1.1.7
 conda==4.8.3
