@@ -1,1 +1,1 @@
-worker: python AlpacaTestTrade.py
+worker: python long_short.ipynb
