@@ -1,1 +1,1 @@
-worker: python long_short.ipynb
+worker: python long_short.py
