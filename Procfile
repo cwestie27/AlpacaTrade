@@ -1,1 +1,1 @@
-worker: python long_short.py
+worker: python AlpacaSMA.ipynb
