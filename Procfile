@@ -1,1 +1,1 @@
-worker: python AlpacaSMA.ipynb
+worker: python AlpacaSMA.py
