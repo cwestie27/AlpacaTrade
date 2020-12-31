@@ -174,19 +174,3 @@ class SMAStrat:
     
 SMAS = SMAStrat()
 SMAS.run()
-
-###Strategy riht now uses 3x qqq long and 2x qqq short with postion sizing 1/2 of equity. Long SMA crossover is 20 day, short is 15 day, so 
-
-
-# In[ ]:
-
-
-##Add some sort of logic that requires two consequitive 10 minute bars to be above or below the sma before trading?
-## build logic that it only trades w/ crossover, not if point in time it's above or below
-##why are sma's on tradingview not step functions?? Look at the source code for 20SMA in trading view
-##See if we can short in the live account and add short logic in. get list of easy to borrow stocks
-## Could use the stock screener in tradingview to get a list of securities to trade
-#switch to polygon data?
-#the leaving one share thing doesn't work. Need to build in a day trader logic ORRR if I switch the acct to a cash acct i'm good, 
-#I'll just have to put logic in so that i'm not buying with unsettled funds
-
