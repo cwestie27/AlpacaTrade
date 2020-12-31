@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 from datetime import datetime
 import numpy as np
 import alpaca_trade_api as tradeapi
@@ -19,8 +13,8 @@ import requests, calendar
 from Dividend_Date import dividend_calendar
 import math
 
-APCA_API_KEY_ID = 'PKJ3ENUSUPG0TOBP9KGK'
-APCA_API_SECRET_KEY = 'IWbZvwwDclhGP5U5JxPotGLyrSxMhAbaxXw3Gl6T'
+APCA_API_KEY_ID = 'PKC7N32R5TA33ABKOWFI'
+APCA_API_SECRET_KEY = 'XrQUKqXhcKBrUP1bGdFJos88acVn2N7PYEJDkLXu'
 APCA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 
 ##creating a dividend calendar
