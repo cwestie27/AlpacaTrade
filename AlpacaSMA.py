@@ -17,7 +17,7 @@ APCA_API_KEY_ID = 'PKC7N32R5TA33ABKOWFI'
 APCA_API_SECRET_KEY = 'XrQUKqXhcKBrUP1bGdFJos88acVn2N7PYEJDkLXu'
 APCA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 
-##creating a dividend calendar
+
 year = datetime.datetime.utcnow().year
 month = datetime.datetime.utcnow().month
 dividend_calendar(year,month) ###run the dividend_calendar class I imported
@@ -37,7 +37,7 @@ concat_df = pd.concat(ourmonth.calendars)
 drop_df = concat_df.dropna(how='any')
 #set the dataframe's row index to the company name
 final_df = drop_df.set_index('companyName')
-##
+
 
 
 
