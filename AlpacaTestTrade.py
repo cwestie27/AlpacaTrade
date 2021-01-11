@@ -11,8 +11,8 @@ import json
 import logging
 
 #authentication and connection details
-APCA_API_KEY_ID = 'PKPIODDUG9GGMDMMDBV9'
-APCA_API_SECRET_KEY = '4Tjm3yyvI8xAP4Shp9jeS5rO6iQ59dPI9jbaIkxo'
+APCA_API_KEY_ID = 'PKC7N32R5TA33ABKOWFI'
+APCA_API_SECRET_KEY = 'XrQUKqXhcKBrUP1bGdFJos88acVn2N7PYEJDkLXu'
 APCA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 
 #instantiate REST API
