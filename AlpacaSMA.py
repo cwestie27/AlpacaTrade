@@ -10,7 +10,7 @@ import logging
 import datetime
 from dateutil import parser
 import requests, calendar
-from Dividend_Date import dividend_calendar
+#from Dividend_Date import dividend_calendar
 import math
 
 APCA_API_KEY_ID = 'PKC7N32R5TA33ABKOWFI'
@@ -21,25 +21,25 @@ APCA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 api = tradeapi.REST(APCA_API_KEY_ID, APCA_API_SECRET_KEY, APCA_API_BASE_URL, api_version='v2')
 ##########
 
-year = datetime.datetime.utcnow().year
-month = datetime.datetime.utcnow().month
-dividend_calendar(year,month) ###run the dividend_calendar class I imported
+#year = datetime.datetime.utcnow().year
+#month = datetime.datetime.utcnow().month
+#dividend_calendar(year,month) ###run the dividend_calendar class I imported
 #get number of days in month
-days_in_month = calendar.monthrange(year, month)[1]
+#days_in_month = calendar.monthrange(year, month)[1]
 #create calendar object    
-ourmonth = dividend_calendar(year, month)
+#ourmonth = dividend_calendar(year, month)
 #define lambda function to iterate over list of days     
-function = lambda days: ourmonth.calendar(days)
+#function = lambda days: ourmonth.calendar(days)
 #define list of ints between 1 and the number of days in the month
-iterator = list(range(1, days_in_month+1))
+#iterator = list(range(1, days_in_month+1))
 #Scrape calendar for each day of the month                    
-objects = list(map(function, iterator))
+#objects = list(map(function, iterator))
 #concatenate all the calendars in the class attribute
-concat_df = pd.concat(ourmonth.calendars)
+#concat_df = pd.concat(ourmonth.calendars)
 #Drop any rows with missing data
-drop_df = concat_df.dropna(how='any')
+#drop_df = concat_df.dropna(how='any')
 #set the dataframe's row index to the company name
-final_df = drop_df.set_index('companyName')
+#final_df = drop_df.set_index('companyName')
 
 ######################
 account = api.get_account()
