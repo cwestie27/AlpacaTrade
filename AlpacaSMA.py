@@ -19,15 +19,6 @@ APCA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 
 ######################
 api = tradeapi.REST(APCA_API_KEY_ID, APCA_API_SECRET_KEY, APCA_API_BASE_URL, api_version='v2')
-account = api.get_account()
-print(account)
-api.submit_order(symbol='SPCE', 
-    qty=1, 
-    side='buy', 
-    time_in_force='gtc', 
-    type='market')
-    #limit_price=400.00, 
-    #client_order_id='001'
 ##########
 
 year = datetime.datetime.utcnow().year
