@@ -108,39 +108,3 @@ class dividend_calendar:
           self.dict_to_df(dictionary)          
           return dictionary
 
-
-# In[19]:
-
-
-#if __name__ == '__main__':
-year = datetime.datetime.utcnow().year
-month = datetime.datetime.utcnow().month
-#year = 2020
-#month = 8
-
-dividend_calendar(year,month)
-#get number of days in month
-days_in_month = calendar.monthrange(year, month)[1]
-#create calendar object    
-ourmonth = dividend_calendar(year, month)
-#define lambda function to iterate over list of days     
-function = lambda days: ourmonth.calendar(days)
-#define list of ints between 1 and the number of days in the month
-iterator = list(range(1, days_in_month+1))
-#Scrape calendar for each day of the month                    
-objects = list(map(function, iterator))
-#concatenate all the calendars in the class attribute
-concat_df = pandas.concat(ourmonth.calendars)
-#Drop any rows with missing data
-drop_df = concat_df.dropna(how='any')
-#set the dataframe's row index to the company name
-final_df = drop_df.set_index('companyName')
-
-    
-
-
-# In[ ]:
-
-
-
-
