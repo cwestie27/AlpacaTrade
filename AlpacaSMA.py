@@ -10,7 +10,7 @@ import logging
 import datetime
 from dateutil import parser
 import requests, calendar
-#from Dividend_Date import dividend_calendar
+from Dividend_Date import dividend_calendar
 import math
 
 APCA_API_KEY_ID = 'PKC7N32R5TA33ABKOWFI'
