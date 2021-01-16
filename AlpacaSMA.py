@@ -17,6 +17,18 @@ APCA_API_KEY_ID = 'PKC7N32R5TA33ABKOWFI'
 APCA_API_SECRET_KEY = 'XrQUKqXhcKBrUP1bGdFJos88acVn2N7PYEJDkLXu'
 APCA_API_BASE_URL = 'https://paper-api.alpaca.markets'
 
+######################
+api = tradeapi.REST(APCA_API_KEY_ID, APCA_API_SECRET_KEY, APCA_API_BASE_URL, api_version='v2')
+account = api.get_account()
+print(account)
+api.submit_order(symbol='SPCE', 
+    qty=1, 
+    side='buy', 
+    time_in_force='gtc', 
+    type='market')
+    #limit_price=400.00, 
+    #client_order_id='001'
+##########
 
 year = datetime.datetime.utcnow().year
 month = datetime.datetime.utcnow().month
@@ -38,7 +50,17 @@ drop_df = concat_df.dropna(how='any')
 #set the dataframe's row index to the company name
 final_df = drop_df.set_index('companyName')
 
-
+######################
+account = api.get_account()
+print(account)
+api.submit_order(symbol='AAPL', 
+    qty=1, 
+    side='buy', 
+    time_in_force='gtc', 
+    type='market')
+    #limit_price=400.00, 
+    #client_order_id='001'
+##########
 
 
 class SMAStrat:
