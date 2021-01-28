@@ -10,7 +10,6 @@ from time import sleep
 import json
 import logging
 
-#authentication and connection details
 APCA_API_KEY_ID = 'PKC7N32R5TA33ABKOWFI'
 APCA_API_SECRET_KEY = 'XrQUKqXhcKBrUP1bGdFJos88acVn2N7PYEJDkLXu'
 APCA_API_BASE_URL = 'https://paper-api.alpaca.markets'
