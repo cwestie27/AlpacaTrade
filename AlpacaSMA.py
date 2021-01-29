@@ -65,6 +65,12 @@ class SMAStrat:
         tAMO = threading.Thread(target=self.awaitMarketOpen)
         tAMO.start()
         tAMO.join()
+        clock = self.alpaca.get_clock() #############################################################Adding this for heroku
+        openingTime = clock.next_open.replace(tzinfo=datetime.timezone.utc).timestamp()
+        currTime = clock.timestamp.replace(tzinfo=datetime.timezone.utc).timestamp()
+        timeToOpen = int((openingTime - currTime) / 60)
+        #if timeToOpen > 30:
+        #    sys.exit()                  #############################################################Adding this for heroku
         print("Market opened.")
         while True:
 
@@ -101,6 +107,8 @@ class SMAStrat:
           currTime = clock.timestamp.replace(tzinfo=datetime.timezone.utc).timestamp()
           timeToOpen = int((openingTime - currTime) / 60)
           print(str(timeToOpen) + " minutes til market open.")
+          #if timeToOpen > 30:      #############################################################Adding this for heroku
+          #  break
           time.sleep(60)
           isOpen = self.alpaca.get_clock().is_open
     
